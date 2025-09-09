@@ -176,7 +176,7 @@ form {
 
 /* Inputs */
 form input {
-  flex: 1 1 45%; /* يتكيف مع حجم الشاشة */
+  flex: 1 1 45%; 
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid #4da6ff55;
@@ -207,7 +207,7 @@ form button {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  flex: 1 1 100%; /* Button يمتد بعرض كامل */
+  flex: 1 1 100%; 
 }
 
 form button:hover {
@@ -227,7 +227,7 @@ form button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* خلفية شفافة */
+  background: rgba(0, 0, 0, 0.6); 
   display: flex;
   justify-content: center;
   align-items: center;
