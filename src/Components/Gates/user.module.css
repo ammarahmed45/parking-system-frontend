@@ -226,6 +226,7 @@ tbody td a:hover {
 }
 .card {
   background-color: rgba(44, 47, 56, 0.85);
+  color:white;
   border: 1px solid #4da6ff55;
   border-radius: 12px;
   padding: 20px;
@@ -297,6 +298,7 @@ tbody td a:hover {
 /* Checkout Summary */
 .summary {
   background-color: rgba(39, 174, 96, 0.15);
+  color:#dbf3e5;
   border: 1px solid #27ae60;
   border-radius: 12px;
   padding: 20px;
@@ -305,7 +307,7 @@ tbody td a:hover {
 }
 
 .summary h2 {
-  color: #27ae60;
+  color: #dbf3e5;
   margin-bottom: 10px;
 }
 
