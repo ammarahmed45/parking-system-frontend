@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import Loading from "./Components/Loading/Loding";
+import Protected from "./Utilities/Protected";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [appUser, setAppUser] = useState({
+    isAuth: false,
+    token: null,
+    user: null,
+  });
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const user = localStorage.getItem("user");
+
+    if (token && user) {
+      setAppUser({
+        isAuth: true,
+        token,
+        user: JSON.parse(user),
+      });
+    }
+    setLoading(false);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {loading ? <Loading /> : <Protected x={{ appUser, setAppUser }} />}
     </div>
   );
 }
